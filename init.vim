@@ -42,3 +42,9 @@ nnoremap <leader>ie :vsp $MYVIMRC<CR>
 
 " source automatically on save
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
+
+" plugins
+source $HOME/.config/nvim/plugins.vim
+
+" plugins config
+source $HOME/.config/nvim/plug-config/nvim-tree.vim
