@@ -4,6 +4,9 @@ vim.g.mapleader = ","
 --set line number
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
 
 -- tab and indent
 vim.opt.tabstop = 4
@@ -28,3 +31,6 @@ vim.cmd "au TextYankPost * silent! lua vim.highlight.on_yank()"
 
 -- treat dash separated words as a word text object
 vim.opt.iskeyword:append("-")
+
+-- for nvim-cmp
+vim.opt.completeopt = {"menu", "menuone", "noselect"}

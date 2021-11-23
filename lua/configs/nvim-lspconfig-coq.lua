@@ -1,9 +1,9 @@
 local lspconfig = require "lspconfig"
--- Setup lspconfig.
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local coq = require "coq"
 
---[[ local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true ]]
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -43,7 +43,7 @@ end
 ----------------
 -- Html Server
 ----------------
-lspconfig.html.setup({capabilities = capabilities, on_attach = on_attach})
+lspconfig.html.setup(coq.lsp_ensure_capabilities({capabilities = capabilities, on_attach = on_attach}))
 
 -----------------
 -- Lua Server
@@ -69,41 +69,42 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lspconfig.sumneko_lua.setup(
-  {
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
-    capabilities = capabilities,
-    on_attach = on_attach,
-    settings = {
-      Lua = {
-        runtime = {
-          -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-          version = "LuaJIT",
-          -- Setup your lua path
-          path = runtime_path
-        },
-        diagnostics = {
-          -- Get the language server to recognize the `vim` global
-          globals = {"vim"}
-        },
-        workspace = {
-          -- Make the server aware of Neovim runtime files
-          library = vim.api.nvim_get_runtime_file("", true)
-        },
-        -- Do not send telemetry data containing a randomized but unique identifier
-        telemetry = {
-          enable = false
+  coq.lsp_ensure_capabilities(
+    {
+      cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
+      on_attach = on_attach,
+      settings = {
+        Lua = {
+          runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = "LuaJIT",
+            -- Setup your lua path
+            path = runtime_path
+          },
+          diagnostics = {
+            -- Get the language server to recognize the `vim` global
+            globals = {"vim"}
+          },
+          workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true)
+          },
+          -- Do not send telemetry data containing a randomized but unique identifier
+          telemetry = {
+            enable = false
+          }
         }
       }
     }
-  }
+  )
 )
 
 -----------------------
 -- Javascript server
------------------------
-lspconfig.tsserver.setup({on_attach = on_attach, capabilities = capabilities})
+----------------------
+lspconfig.tsserver.setup(coq.lsp_ensure_capabilities({on_attach = on_attach}))
 
 -----------------------
 -- PHP server
 -----------------------
-lspconfig.intelephense.setup({on_attach = on_attach, capabilities = capabilities})
+lspconfig.intelephense.setup(coq.lsp_ensure_capabilities({on_attach = on_attach}))
