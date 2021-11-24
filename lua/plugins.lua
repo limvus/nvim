@@ -65,20 +65,19 @@ return require("packer").startup(
 
     use "neovim/nvim-lspconfig"
     use "williamboman/nvim-lsp-installer"
+    use {"tami5/lspsaga.nvim", branch = "nvim51"}
     use "onsails/lspkind-nvim"
-    use "hrsh7th/cmp-nvim-lsp"
+    --[[ use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-path"
     use "hrsh7th/cmp-cmdline"
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-vsnip"
-    use "hrsh7th/vim-vsnip"
-
-    --[[
+    use "hrsh7th/vim-vsnip" ]]
     use {"ms-jpq/coq_nvim", branch = "coq"}
     use {"ms-jpq/coq.artifacts", branch = "artifacts"}
     use {"ms-jpq/coq.thirdparty", branch = "3p"}
-    ]]
+
     use "mhartington/formatter.nvim"
     use "junegunn/vim-easy-align"
     use "b3nj5m1n/kommentary"
@@ -90,6 +89,7 @@ return require("packer").startup(
     use "windwp/nvim-autopairs"
     use "p00f/nvim-ts-rainbow"
     use "romgrk/nvim-treesitter-context"
+    use "haringsrob/nvim_context_vt"
 
     -- Run Tests
     use "vim-test/vim-test"

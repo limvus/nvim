@@ -74,30 +74,20 @@ _G.packer_plugins = {
     path = "/home/sudip/.local/share/nvim/site/pack/packer/start/better-indent-support-for-php-with-html",
     url = "https://github.com/captbaritone/better-indent-support-for-php-with-html"
   },
-  ["cmp-buffer"] = {
+  ["coq.artifacts"] = {
     loaded = true,
-    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
+    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/coq.artifacts",
+    url = "https://github.com/ms-jpq/coq.artifacts"
   },
-  ["cmp-cmdline"] = {
+  ["coq.thirdparty"] = {
     loaded = true,
-    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
+    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/coq.thirdparty",
+    url = "https://github.com/ms-jpq/coq.thirdparty"
   },
-  ["cmp-nvim-lsp"] = {
+  coq_nvim = {
     loaded = true,
-    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  ["cmp-vsnip"] = {
-    loaded = true,
-    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "https://github.com/hrsh7th/cmp-vsnip"
+    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/coq_nvim",
+    url = "https://github.com/ms-jpq/coq_nvim"
   },
   ["dracula.nvim"] = {
     loaded = true,
@@ -144,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/sudip/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/tami5/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/sudip/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -163,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sudip/.local/share/nvim/site/pack/packer/start/nvim-bqf",
     url = "https://github.com/kevinhwang91/nvim-bqf"
-  },
-  ["nvim-cmp"] = {
-    loaded = true,
-    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -214,6 +204,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sudip/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  nvim_context_vt = {
+    loaded = true,
+    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/nvim_context_vt",
+    url = "https://github.com/haringsrob/nvim_context_vt"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -294,11 +289,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sudip/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/sudip/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
   },
   ["vim-zoomwin"] = {
     loaded = true,

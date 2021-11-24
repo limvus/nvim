@@ -32,7 +32,6 @@ vim.api.nvim_set_keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 -- Alternate way to save and quit
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-q>", ":wq!<CR>", opts)
-
 -- Better indenting
 vim.api.nvim_set_keymap("v", "<", "<gv", opts)
 vim.api.nvim_set_keymap("v", ">", ">gv", opts)

@@ -1,3 +1,5 @@
+vim.opt.completeopt = {"menu", "menuone", "noselect"}
+
 local lspkind = require("lspkind")
 
 local has_words_before = function()

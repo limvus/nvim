@@ -32,5 +32,4 @@ vim.cmd "au TextYankPost * silent! lua vim.highlight.on_yank()"
 -- treat dash separated words as a word text object
 vim.opt.iskeyword:append("-")
 
--- for nvim-cmp
-vim.opt.completeopt = {"menu", "menuone", "noselect"}
+vim.opt.mouse = "nv"
